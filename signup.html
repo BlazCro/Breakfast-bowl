@@ -3,103 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track</title>
+    <title>Sign Up</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("smoke.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
         }
-        header {
-            background-color: #333;
+        .signup-box {
+            background-color: black;
             color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 30px;
-        }
-        header h1 {
-            font-size: 50px;
-            float: middle;
-            text-align: center;
-        }
-        header h2 {
-            font-size: 30px;
-            border-style: solid; 
-            text-align: center;
-            color:black;
-        }
-        main {
-            padding: 6rem;
-            border-style: solid;
-            border-color: black;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 4px solid yellowgreen;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 5px yellowgreen;
+            width: 300px;
             text-align: center;
         }
-        main h2 + p {
-            border: 2px solid black;
-            padding: 0.5rem;
-            background-color: gray;
+        .signup-box h2 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+            text-align: left;
         }
-        main a: :hover {
-            color: black;
-            text-decoration: underline ;
-            font-size: 13px;
-        }                                       
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
+        .signup-box input {
             width: 100%;
-            bottom: 0;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        footer a {
+        .signup-box button {
+            width: 130px;
+            padding: 0.5rem;
+            text-align: center;
+            background-color: #333;
             color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .signup-box button:hover {
+            background-color: #555;
+            border: solid 2px yellowgreen;
+            border-radius: 6px;
+        }
+        .signup-box a {
+            display: block;
+            margin-top: 1rem;
+            color: lightgray
             text-decoration: none;
-            font-size: 13px;
-        }footer a:hover {
-            color:lightskyblue;
+        }
+        .signup-box a:hover {
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 id="TOP">The Iron Bowl</h1>
-    </header>
-    <main>
-        <h2><b>SING UP</b></h2>
-        <h3>Email Address: </h3>
-        <input type="text" id="email" name="email" required>
-        <h3>First Name: </h3>
-        <input type="text" id="first" name="first" required>
-        <h3>Last Name: </h3>
-        <input type="text" id="last" name="last" required>
-        <h3>Username: </h3>
-        <input type="text" id="username" name="username" required>
-        <h3>Password: </h3>
-        <input type="password" id="password" name="password" required>
-        <h3>Confirm Password: </h3>
-        <input type="password" id="password" name="password" required>
-        <h3>Phone Number: </h3>
-        <input type="text" id="phone" name="phone" required>
-        <h3>Date of Birth: </h3>
-        <input type="date" id="dob" name="dob" required>
-        <h3>Weight: </h3>
-        <input type="text" id="weight" name="weight" required>
-        <h3>Height: </h3>
-        <input type="text" id="height" name="height" required>
-        <br>
-        <br>
-        <br>
-        <button type="submit">Submit</button>
-        <br>
-        <br>
-        <br>
-        <a href="The%20Iron%20bowl.html">Back to the main page</a>
-    </main>
-    <footer>
-        <p><a href="programs.html"> Programs |</a><a href="about us.html"> About us |</a><a href="contact.html"> Contact |</a>
-            <a href="login.html"> Login</a></p>
-    </footer>
+    <div class="signup-box">
+        <form action="signup.php" method="post">
+            <h2>Email Address:</h2>
+            <input type="text" id="email" name="email" required>
+            <h2>First Name:</h2>
+            <input type="text" id="first" name="first" required>
+            <h2>Last Name:</h2>
+            <input type="text" id="last" name="last" required>
+            <h2>Username:</h2>
+            <input type="text" id="username" name="username" required>
+            <h2>Password:</h2>
+            <input type="password" id="password" name="password" required>
+            <h2>Confirm Password:</h2>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <h2>Phone Number:</h2>
+            <input type="text" id="phone" name="phone" required>
+            <h2>Date of Birth:</h2>
+            <input type="date" id="dob" name="dob" required>
+            <h2>Weight:</h2>
+            <input type="text" id="weight" name="weight" required>
+            <h2>Height:</h2>
+            <input type="text" id="height" name="height" required>
+            <button type="submit">Submit</button>
+            <a href="The%20Iron%20bowl.html">Back to the main page</a>
+        </form>
+    </div>
 </body>
 </html>

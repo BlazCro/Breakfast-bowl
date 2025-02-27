@@ -3,90 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track</title>
+    <title>Log In</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("smoke.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
         header {
-            background-color: #333;
+            background-color: black;
             color: white;
-            padding: 1rem;
+            padding: 2rem;
             text-align: center;
             font-size: 30px;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            border: solid bottom 2px yellowgreen;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 5px yellowgreen;
         }
         header h1 {
             font-size: 50px;
-            float: middle;
+            margin: 0;
+            padding-top: 20px;
             text-align: center;
         }
-        header h2 {
-            font-size: 30px;
-            border-style: solid; 
-            text-align: center;
-            color:black;
-        }
-        main {
-            padding: 6rem;
-            border-style: solid;
-            border-color: black;;
-            padding-left: 30px;
-        }
-        main h2 + p {
-            border: 2px solid black;
-            padding: 0.5rem;
-            background-color: gray;
-        }
-        main a: :hover {
-            color: black;
-            text-decoration: underline ;
-            font-size: 13px;
-        }                                       
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        footer a {
+        .login-box {
+            background-color: black;
             color: white;
+            padding: 2rem;
+            border: 4px solid yellowgreen;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 5px yellowgreen;
+            width: 300px;
+            text-align: center;
+        }
+        .login-box h2 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box button {
+            width: 130px;
+            padding: 0.5rem;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #555;
+            border: solid 2px yellowgreen;
+            border-radius: 6px;
+        }
+        .login-box a {
+            display: block;
+            margin-top: 1rem;
+            color: lightgray;
             text-decoration: none;
-            font-size: 13px;
-        }footer a:hover {
-            color:lightskyblue;
+        }
+        .login-box a:hover {
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 id="TOP">The Iron Bowl</h1>
-    </header>
-    <main>
-        <h2>LOG IN</h2>
-        <p>Track all your progress here from previous workouts to previous completed programs!</p>
-        <h3>Username:</h3>
-        <input type="text" id="username" name="username" required>
-        <h3>Password:</h3>
-        <input type="password" id="password" name="password" required>
+    <div class="login-box">
+        <h1>Log in</h1>
         <br>
-        <br>
-        <br>
-        <br>
-        <button type="submit">Submit</button>
-        <Br>
-        <Br>
-        <Br>
-        <Br>
-        <a href="The%20Iron%20bowl.html">Back to the main page</a>
-    </main>
-    <footer>
-        <p><a href="programs.html"> Programs |</a><a href="about us.html"> About us |</a><a href="contact.html"> Contact |</a>
-            <a href="login.html"> Login</a></p>
-    </footer>
+        <!-- The form action is set to login.php, which is a file that does not exist in the repository. -->
+        <form action="login.php" method="post">
+            <h2> Username: </h2>
+            <input type="text" id="username" name="username" required>
+            <h2> Password: </h2>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+            <a href="The%20Iron%20bowl.html">Back to the main page</a>
+        </form>
+    </div>
 </body>
 </html>
